@@ -13,7 +13,7 @@ export default function App2(){
     const reset=()=>{
         setIsRunning(false);
         setElapsedTime(0);
-        }
+        };
     useEffect(()=>{
         let intervalId;
         if(isRunning)
@@ -32,7 +32,7 @@ export default function App2(){
             <h1>Stopwatch</h1>
             <p>Time: {formatTime(elapsedTime)}</p>
              <button onClick={toggleTime}>{isRunning?"Stop":"Start"}</button> 
-             <button onClick={reset}Reset></button>
+             <button onClick={reset}>Reset</button>
         </div>
     );
 }
