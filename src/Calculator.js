@@ -22,6 +22,13 @@ const Calculator = () => {
     // Custom logic to calculate the expression
     const operators = expression.match(/[+\-*/]/g);
     const operands = expression.split(/[+\-*/]/).map(Number);
+    if (operands.includes(NaN) || (expression.includes('0/0'))) {
+        throw new Error('NaN');
+      }
+    if(expression.length===0)
+    {
+        throw new Error('Error'); 
+    }
 
     let result = operands[0];
 
