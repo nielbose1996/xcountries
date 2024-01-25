@@ -14,7 +14,7 @@ const Calculator = () => {
       const calculatedResult = calculateExpression(input);
       setResult(calculatedResult.toString());
     } catch (error) {
-      setResult(error);
+      setResult(error.message);
     }
   };
 
