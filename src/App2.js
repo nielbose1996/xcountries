@@ -25,6 +25,7 @@ export default function App2(){
         else{
             clearInterval(intervalId);
         }
+        return () =>{clearInterval(intervalId)};
     },[isRunning]);
     return(
         <div>
@@ -33,5 +34,5 @@ export default function App2(){
              <button onClick={toggleTime}>{isRunning?"Stop":"Start"}</button> 
              <button onClick={reset}Reset></button>
         </div>
-    )
+    );
 }
