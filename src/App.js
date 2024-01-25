@@ -10,11 +10,11 @@ function App() {
     .catch((err)=>console.error("Error fetching data: ",err));
   },[]);
   return (
-    <div >
+    <div className='containerStyle'>
        {
         countries.map((country)=>(
-          <div>
-            <img src={country.flags.png} alt={`flag of ${country.name.common}`}></img>
+          <div className='cardStyle'>
+            <img className='imageStyle' src={country.flags.png} alt={`flag of ${country.name.common}`}></img>
             <h2>{country.name.common}</h2>
           </div>
         ))
