@@ -14,7 +14,7 @@ const Calculator = () => {
       const calculatedResult = calculateExpression(input);
       setResult(calculatedResult.toString());
     } catch (error) {
-      setResult('Error');
+      setResult(error);
     }
   };
 
@@ -38,11 +38,11 @@ const Calculator = () => {
           result *= operand;
           break;
         case '/':
-          if (operand === 0) throw new Error('Cannot divide by zero');
+          if (operand === 0) throw new Error('Infinity');
           result /= operand;
           break;
         default:
-          throw new Error('Invalid operator');
+          throw new Error('Error');
       }
     });
 
