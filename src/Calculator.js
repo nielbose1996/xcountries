@@ -30,30 +30,49 @@ const Calculator = () => {
         throw new Error('Error'); 
     }
 
-    let result = operands[0];
-
-    operators.forEach((operator, index) => {
-      const operand = operands[index + 1];
-      switch (operator) {
-        case '+':
-          result += operand;
-          break;
-        case '-':
-          result -= operand;
-          break;
-        case '*':
-          result *= operand;
-          break;
-        case '/':
-          if (operand === 0) throw new Error('Infinity');
-          result /= operand;
-          break;
-        default:
-          throw new Error('Error');
+ 
+    for (let i = 0; i < operators.length; i++) {
+        if (operators[i] === '*' || operators[i] === '/') {
+          const operand1 = operands[i];
+          const operand2 = operands[i + 1];
+    
+          switch (operators[i]) {
+            case '*':
+              operands.splice(i, 2, operand1 * operand2);
+              operators.splice(i, 1);
+              i--; // Adjust the index as we removed two elements
+              break;
+            case '/':
+              if (operand2 === 0) {
+                throw new Error('Infinity');
+              }
+              operands.splice(i, 2, operand1 / operand2);
+              operators.splice(i, 1);
+              i--; // Adjust the index as we removed two elements
+              break;
+            default:
+              break;
+          }
+        }
       }
-    });
-
-    return result;
+    
+      // Handle addition and subtraction
+      let result = operands[0];
+      for (let i = 0; i < operators.length; i++) {
+        const operand = operands[i + 1];
+        switch (operators[i]) {
+          case '+':
+            result += operand;
+            break;
+          case '-':
+            result -= operand;
+            break;
+          default:
+            throw new Error('Error');
+        }
+      }
+    
+      return result;
   };
 
   const handleClear = () => {
