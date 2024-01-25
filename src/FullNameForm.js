@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const FullNameForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [fullName, setFullName] = useState('');
-  const [showError, setShowError] = useState(false);
+  const [errors, setErrors] = useState({ firstName: false, lastName: false });
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
+    setErrors({ ...errors, firstName: false });
   };
 
   const handleLastNameChange = (e) => {
     setLastName(e.target.value);
+    setErrors({ ...errors, lastName: false });
   };
 
   const handleSubmit = (e) => {
@@ -21,9 +25,12 @@ const FullNameForm = () => {
     if (firstName && lastName) {
       const newFullName = `${firstName} ${lastName}`;
       setFullName(newFullName);
-      setShowError(false);
     } else {
-      setShowError(true);
+      // Update the errors state to show error messages
+      setErrors({
+        firstName: !firstName,
+        lastName: !lastName,
+      });
     }
   };
 
@@ -31,23 +38,31 @@ const FullNameForm = () => {
     <div>
       <h2>Full Name Display</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input type="text" value={firstName} onChange={handleFirstNameChange} />
-        </label>
+        <TextField
+          label="First Name"
+          variant="outlined"
+          value={firstName}
+          onChange={handleFirstNameChange}
+          error={errors.firstName}
+          helperText={errors.firstName && 'Please fill out this field.'}
+        />
         <br />
-        <label>
-          Last Name:
-          <input type="text" value={lastName} onChange={handleLastNameChange} />
-        </label>
+        <TextField
+          label="Last Name"
+          variant="outlined"
+          value={lastName}
+          onChange={handleLastNameChange}
+          error={errors.lastName}
+          helperText={errors.lastName && 'Please fill out this field.'}
+        />
         <br />
-        {showError && <span style={{ color: 'yellow' }}>Please fill out this field.</span>}
-        <br />
-        <button type="submit">Submit</button>
+        <Button type="submit" variant="contained" color="primary">
+          Submit
+        </Button>
       </form>
       {fullName && (
         <div>
-          <p>Full Name: "{firstName}" "{lastName}"</p>
+          <p>Full Name: {firstName} {lastName}</p>
         </div>
       )}
     </div>
