@@ -3,7 +3,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   margin: 10px;
-  padding: 10px;
+  padding: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 .imageStyle{
   width:100px;
-  height: 100px;
+  height:100px;
 }
 .containerStyle{
   display: flex;
