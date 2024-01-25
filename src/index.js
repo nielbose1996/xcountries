@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import App2 from './App2';
 import App3 from './FullNameForm';
+import App4 from './Counter'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App3 />
+    <App4 />
   </React.StrictMode>
 );
 
