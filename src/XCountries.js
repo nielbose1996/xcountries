@@ -35,23 +35,27 @@ function App() {
 
   return (
     <div className='containerStyle'>
-      <input
-        type='text'
-        placeholder='Search for countries ...'
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className='searchBar'
-      />
-      {filteredCountries.map((country) => (
-        <div className='cardStyle' key={country.name.common}>
-          <img
-            className='imageStyle'
-            src={country.flags.png}
-            alt={`flag of ${country.name.common}`}
-          ></img>
-          <h2>{country.name.common}</h2>
-        </div>
-      ))}
+      <div className='searchContainer'>
+        <input
+          type='text'
+          placeholder='Search for countries ...'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className='searchBar'
+        />
+      </div>
+      <div className='flagsContainer'>
+        {filteredCountries.map((country) => (
+          <div className='cardStyle' key={country.name.common}>
+            <img
+              className='imageStyle'
+              src={country.flags.png}
+              alt={`flag of ${country.name.common}`}
+            ></img>
+            <h2>{country.name.common}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

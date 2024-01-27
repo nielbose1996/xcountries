@@ -20,3 +20,19 @@
   align-items: center;
   height: 100vh;
 }
+.searchContainer {
+  margin-bottom: 20px;
+}
+
+.searchBar {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.flagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
