@@ -27,16 +27,16 @@ class CounterAppClass extends Component {
       <div>
         <h1>Counter App</h1>
         <p>Count: {count}</p>
-        <div style={{ display: "flex", gap: "10px" }}>
+        <div style={{ display: "flex", gap: "20px" }}>
           <button
             onClick={this.increment}
-            style={{ maxWidth: "80px", width: "100%" }}
+            style={{ maxWidth: "200px", width: "100%" }}
           >
             Increment
           </button>
           <button
             onClick={this.decrement}
-            style={{ maxWidth: "80px", width: "100%" }}
+            style={{ maxWidth: "200px", width: "100%" }}
           >
             Decrement
           </button>
