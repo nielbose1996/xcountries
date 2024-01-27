@@ -25,10 +25,22 @@ class CounterAppClass extends Component {
 
     return (
       <div>
-        <h1>Counter App (Class-based)</h1>
+        <h1>Counter App</h1>
         <p>Count: {count}</p>
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={this.decrement}>Decrement</button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            onClick={this.increment}
+            style={{ maxWidth: "80px", width: "100%" }}
+          >
+            Increment
+          </button>
+          <button
+            onClick={this.decrement}
+            style={{ maxWidth: "80px", width: "100%" }}
+          >
+            Decrement
+          </button>
+        </div>
       </div>
     );
   }
