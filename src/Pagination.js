@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './Pagination.css'; // Import your CSS file
 
-const API_ENDPOINT = 'https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json';
+const API_ENDPOINT =
+  'https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json';
 
 const Pagination = () => {
   const [data, setData] = useState([]);
@@ -60,12 +62,20 @@ const Pagination = () => {
           ))}
         </tbody>
       </table>
-      <div>
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+      <div className="pagination-container">
+        <button
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+          className="pagination-button"
+        >
           Previous
         </button>
         <span>Page {currentPage}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className="pagination-button"
+        >
           Next
         </button>
       </div>
