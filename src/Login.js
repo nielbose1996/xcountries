@@ -23,7 +23,7 @@ export default function Login(){
         <div>
             <h1>Login Page</h1>
             {
-                isSubmitted?(
+                {isSubmitted}?(
                     <div>
                        <p>Welcome, {username}</p>
                     </div>
