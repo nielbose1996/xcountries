@@ -6,10 +6,11 @@ import App2 from './App2';
 import App3 from './FullNameForm';
 import App4 from './Counter'
 import Calculator from './Calculator';
+import XState from './XState';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <XState />
   </React.StrictMode>
 );
 
