@@ -9,10 +9,11 @@ import Calculator from './Calculator';
 import XState from './XState';
 import Login from './Login.js';
 import XCountries from './XCountries.js'
+import CounterAppClass from './CounterClass.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <XCountries />
+    <CounterAppClass />
   </React.StrictMode>
 );
 
