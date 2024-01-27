@@ -10,10 +10,11 @@ import XState from './XState';
 import Login from './Login.js';
 import XCountries from './XCountries.js'
 import CounterAppClass from './CounterClass.js';
+import Pagination from './Pagination.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CounterAppClass />
+    <Pagination />
   </React.StrictMode>
 );
 
