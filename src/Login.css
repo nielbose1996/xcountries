@@ -1,0 +1,29 @@
+.login-form {
+    max-width: 300px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .submit-button {
+    max-width: 100px;
+    padding: 10px;
+  }
+  .err {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
