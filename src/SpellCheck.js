@@ -9,11 +9,10 @@ export default function SpellCheck(){
     const [text,setText]=useState("");
     const [suggestedText,setSuggestedText]=useState("");
     const handleInputChange=(e)=>{
-        const text1 =e.target.value;
-        setText(text1);
+        setText(e.target.value);
         const words=text.split(" ");
         const correctedWords=words.map((word)=>{
-            const correctedWord=customDictionary[word.toLoweCase()];
+            const correctedWord=customDictionary[word.toLowerCase()];
             return correctedWord||word;
         });
         const correctedText=correctedWords.join(" ");
