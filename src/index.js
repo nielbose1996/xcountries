@@ -12,10 +12,11 @@ import XCountries from './XCountries.js'
 import CounterAppClass from './CounterClass.js';
 import Pagination from './Pagination.js';
 import Dictionary from './Dictionary.js';
+import Xweather from './XWeather.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Dictionary />
+    <Xweather />
   </React.StrictMode>
 );
 
