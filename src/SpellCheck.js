@@ -9,8 +9,9 @@ export default function SpellCheck(){
     const [text,setText]=useState("");
     const [suggestedText,setSuggestedText]=useState("");
     const handleInputChange=(e)=>{
-        setText(e.target.value);
-        const words=text.split(" ");
+        const newText=e.target.value;
+        setText(newText);
+        const words=newText.split(" ");
         const correctedWords=words.map((word)=>{
             const correctedWord=customDictionary[word.toLowerCase()];
             return correctedWord||word;
