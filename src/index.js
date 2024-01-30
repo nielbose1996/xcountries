@@ -13,10 +13,11 @@ import CounterAppClass from './CounterClass.js';
 import Pagination from './Pagination.js';
 import Dictionary from './Dictionary.js';
 import Xweather from './XWeather.js';
+import SpellCheck from './SpellCheck.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Xweather />
+    <SpellCheck />
   </React.StrictMode>
 );
 
