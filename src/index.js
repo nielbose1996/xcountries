@@ -11,10 +11,11 @@ import Login from './Login.js';
 import XCountries from './XCountries.js'
 import CounterAppClass from './CounterClass.js';
 import Pagination from './Pagination.js';
+import Dictionary from './Dictionary.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Pagination />
+    <Dictionary />
   </React.StrictMode>
 );
 

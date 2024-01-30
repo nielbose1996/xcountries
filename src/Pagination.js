@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Pagination.css'; // Import your CSS file
+import './Pagination.css'; 
 
 const API_ENDPOINT =
   'https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json';
