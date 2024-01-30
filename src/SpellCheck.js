@@ -24,7 +24,7 @@ export default function SpellCheck(){
         <div>
             <h1>Spell Check and Auto-Correction</h1>
             <textarea value={text} onChange={handleInputChange} placeholder='Enter text...' rows={5} cols={40}/>
-            {suggestedText && (<p>Did you mean: <strong>{suggestedText}</strong></p>)}
+            {suggestedText && (<p>Did you mean: <strong>{suggestedText}</strong>?</p>)}
 
         </div>
 
