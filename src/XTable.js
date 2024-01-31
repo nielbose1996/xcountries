@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const initialData = [
-  { date: "2022-09-01", views: 100, article: "Article 1" },
   { date: "2023-09-01", views: 100, article: "Article 1" },
   { date: "2023-09-02", views: 150, article: "Article 2" },
   { date: "2023-09-02", views: 120, article: "Article 3" },
