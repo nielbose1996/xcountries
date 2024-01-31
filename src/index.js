@@ -14,10 +14,11 @@ import Pagination from './Pagination.js';
 import Dictionary from './Dictionary.js';
 import Xweather from './XWeather.js';
 import SpellCheck from './SpellCheck.js';
+import XTable from './XTable.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SpellCheck />
+    <XTable />
   </React.StrictMode>
 );
 
