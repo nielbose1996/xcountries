@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Add your CSS file
+import './XModal.css';
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,14 +16,6 @@ const App = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setErrors({});
-    resetForm();
-  };
-
-  const resetForm = () => {
-    setUsername('');
-    setEmail('');
-    setPhone('');
-    setDob('');
   };
 
   const validateAndSubmit = () => {
@@ -59,7 +51,7 @@ const App = () => {
     setErrors(newErrors);
 
     // If there are no errors, handle successful form submission here
-    // Close the modal and reset form
+    // Close the modal
     if (Object.keys(newErrors).length === 0) {
       closeModal();
     }

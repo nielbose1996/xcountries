@@ -4,6 +4,7 @@
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 20px;
+    background-color: #fff;
   }
   
   .modal {
@@ -28,7 +29,7 @@
   .submit-button {
     background-color: blue;
     color: white;
-    width: 120px;
+    width: 180px;
     cursor: pointer;
     border: none;
     padding: 10px;
