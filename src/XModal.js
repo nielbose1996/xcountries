@@ -68,7 +68,7 @@ const App = () => {
   return (
     <div className="App">
       <h2>User Details Modal</h2>
-      <button className="submit-button" onClick={openModal}>Open Form</button>
+      <button onClick={openModal}>Open Form</button>
 
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
