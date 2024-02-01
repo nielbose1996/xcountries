@@ -15,10 +15,11 @@ import Dictionary from './Dictionary.js';
 import Xweather from './XWeather.js';
 import SpellCheck from './SpellCheck.js';
 import XTable from './XTable.js';
+import XModal from './XModal.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <XTable />
+    <XModal />
   </React.StrictMode>
 );
 
