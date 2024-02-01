@@ -54,13 +54,17 @@ const App = () => {
     // Close the modal
     if (Object.keys(newErrors).length === 0) {
       closeModal();
+      setUsername('');
+      setEmail('');
+      setPhone('');
+      setDob('');
     }
   };
 
   return (
     <div className="App">
       <h2>User Details Modal</h2>
-      <button onClick={openModal}>Open Form</button>
+      <button className="submit-button" onClick={openModal}>Open Form</button>
 
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
