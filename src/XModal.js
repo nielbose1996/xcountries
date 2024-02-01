@@ -69,6 +69,7 @@ const App = () => {
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <form>
             <h2>Fill Details</h2>
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
@@ -87,6 +88,7 @@ const App = () => {
             {errors.dob && <p className="error-message">{errors.dob}</p>}
 
             <button className="submit-button" onClick={validateAndSubmit}>Submit</button>
+            </form>
           </div>
         </div>
       )}
