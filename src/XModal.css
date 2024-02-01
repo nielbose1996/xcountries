@@ -36,10 +36,10 @@
     margin-top: 10px;
   }
   
-  /* Adjustments for better responsiveness */
+  /* Adjustments for better responsiveness 
   @media (max-width: 600px) {
     .modal-content {
       width: 80%;
     }
   }
-  
+  */
